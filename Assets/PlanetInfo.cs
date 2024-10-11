@@ -8,6 +8,10 @@ public class PlanetInfo : MonoBehaviour
     [SerializeField] GameObject infoPanel;
     [SerializeField] Text infoText;
 
+    public void CloseInfoPanel()
+    {
+        infoPanel.SetActive(false);
+    }
     private void Update()
     {
         if (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began)
